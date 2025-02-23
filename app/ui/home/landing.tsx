@@ -14,7 +14,7 @@ export default function Landing() {
 
   return (
     <section className="min-h-screen bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-dark.svg')] dark:bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply">
-      <div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56 relative z-10">
+      <div className="px-4 mx-auto max-w-screen-xl text-center py-40 lg:py-56 relative z-10">
         <TypeAnimation
           key={language}
           className="md:text-4xl text-xl font-bold text-blue-700"
