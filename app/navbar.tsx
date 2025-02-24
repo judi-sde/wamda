@@ -52,16 +52,14 @@ export default function Navbar() {
       className={`fixed w-full z-20 top-0 start-0 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-600 ${isScrolled ? '' : ''}`}
     >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <Link href="/" onClick={() => setIsMenuOpen(false)}>
-          <WamdaLogo />
-        </Link>
+        <WamdaLogo onClick={() => setIsMenuOpen(false)} />
         <div className="flex lg:order-2 space-x-3 lg:space-x-0 rtl:space-x-reverse">
           {/* <div className="flex lg:order-2 space-x-3 rtl:space-x-reverse"> */}
-            <button onClick={toggleLanguage} type="button" className="flex justify-evenly items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-              <GlobeAltIcon className="w-6 h-6" />
-              <span>{language === "en" ? 'EN' : 'AR'}</span>
-            </button>
-            {/* <button onClick={toggleTheme} type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 rounded-full p-2 text-center">
+          <button onClick={toggleLanguage} type="button" className="flex justify-evenly items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            <GlobeAltIcon className="w-6 h-6" />
+            <span>{language === "en" ? 'EN' : 'AR'}</span>
+          </button>
+          {/* <button onClick={toggleTheme} type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 rounded-full p-2 text-center">
               {theme === "dark" ? <SunIcon className="w-6 h-6" /> : <MoonIcon className="w-6 h-6" />}
               <span className="sr-only">{theme === "dark" ? "light" : "dark"}</span>
             </button>
