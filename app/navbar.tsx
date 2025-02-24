@@ -49,7 +49,7 @@ export default function Navbar() {
       animate={{ y: isHidden ? -100 : 0 }}
       transition={{ duration: 0.5 }}
       // className={`fixed w-full z-20 top-0 start-0 ${isScrolled ? 'bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-600' : 'bg-transparent'}`}
-      className={`fixed w-full z-20 top-0 start-0 bg-blue-200 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-600 ${isScrolled ? '' : ''}`}
+      className={`fixed w-full z-20 top-0 start-0 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-600 ${isScrolled ? '' : ''}`}
     >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link href="/" onClick={() => setIsMenuOpen(false)}>

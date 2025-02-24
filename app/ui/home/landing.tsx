@@ -17,7 +17,7 @@ export default function Landing() {
       <div className="px-4 mx-auto max-w-screen-xl text-center py-40 lg:py-56 relative z-10">
         <TypeAnimation
           key={language}
-          className="md:text-4xl text-xl font-bold text-blue-700"
+          className="md:text-4xl text-xl font-bold text-gray-900 backdrop-brightness-200"
           cursor={true}
           sequence={[
             sequence[0],
