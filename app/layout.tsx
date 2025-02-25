@@ -8,6 +8,7 @@ import Footer from "@/app/footer";
 export const metadata: Metadata = {
   title: "Wamda Ceneter",
   description: "Design first company",
+  metadataBase: new URL('https://wamda-center.vercel.app'),
 };
 
 export default function RootLayout({
