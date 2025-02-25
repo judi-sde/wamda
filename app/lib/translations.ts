@@ -18,8 +18,8 @@ export const translations = {
       title: "About Us",
       description:
         "Wamda Center is a hub for creativity and innovation. We offer 3D printing services, video editing, and design to bring your ideas to life.",
-      whyChooseUs: [
-        { title: "High 3D printing technology", description: "Utilizing the latest advancements in 3D printing to deliver high-quality results." },
+      features: [
+        { title: "High 3D printing technology", description: "Utilizing the latest technologies in 3D printing to deliver high-quality results." },
         { title: "Advanced design software and tools", description: "Equipped with cutting-edge software and tools for superior design capabilities." },
         { title: "Client satisfaction and requirement gathering", description: "Focused on understanding and meeting client needs to ensure satisfaction." },
       ],
@@ -82,8 +82,8 @@ export const translations = {
       title: "معلومات عنا",
       description:
         "مركز ومضة هو مركز للابتكار والإبداع. نقدم خدمات الطباعة ثلاثية الأبعاد، وتحرير الفيديو، والتصميم لتحقيق أفكارك.",
-      whyChooseUs: [
-        { title: "تقنية الطباعة ثلاثية الأبعاد المتطورة", description: "استخدام أحدث التطورات في الطباعة ثلاثية الأبعاد لتقديم نتائج عالية الجودة." },
+      features: [
+        { title: "تقنية الطباعة ثلاثية الأبعاد المتطورة", description: "استخدام أحدث تقنيات الطباعة ثلاثية الأبعاد لتقديم نتائج عالية الجودة." },
         { title: "برامج وأدوات التصميم المتقدمة", description: "مجهزة بأحدث البرامج والأدوات لتحقيق قدرات تصميم فائقة." },
         { title: "رضا العملاء وجمع المتطلبات", description: "التركيز على فهم وتلبية احتياجات العملاء لضمان رضاهم." },
       ],

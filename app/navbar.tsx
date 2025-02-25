@@ -7,7 +7,6 @@ import { GlobeAltIcon } from '@heroicons/react/24/outline';
 import WamdaLogo from "@/app/ui/wamda-logo";
 import NavLinks from "@/app/ui/nav-links";
 import { useLanguage } from "@/app/lib/context/LanguageContext";
-// import { useTheme } from './lib/context/ThemeContext';
 
 export default function Navbar() {
   const { setLanguage, language } = useLanguage();

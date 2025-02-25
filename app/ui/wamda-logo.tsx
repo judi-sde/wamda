@@ -16,7 +16,7 @@ export default function WamdaLogo({ ...attr }: WamdaLogoProps) {
       {...attr}
       className={`${logoFont.className} flex flex-row items-center gap-2 leading-none dark:text-white text-blue-500`}
     >
-      <Image src="/wamda-logo.png" alt="Wamda Logo" width={44} height={44} />
+      <Image src="/wamda-logo.png" alt="Wamda Logo" width={44} height={44}  className="ltr:scale-x-[-1]" />
       <p className="text-3xl">{logo}</p>
     </Link>
   );
