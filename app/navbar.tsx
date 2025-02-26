@@ -1,12 +1,12 @@
 "use client"
 
 import { motion } from 'framer-motion';
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { GlobeAltIcon } from '@heroicons/react/24/outline';
 import WamdaLogo from "@/app/ui/wamda-logo";
 import NavLinks from "@/app/ui/nav-links";
 import { useLanguage } from "@/app/lib/context/LanguageContext";
+import { navbarIcons } from '@/app/ui/icons';
 
 export default function Navbar() {
   const { setLanguage, language } = useLanguage();
@@ -65,27 +65,11 @@ export default function Navbar() {
           </div> */}
           <button onClick={toggleMenu} data-collapse-toggle="navbar-sticky" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded={isMenuOpen}>
             <span className="sr-only">{isMenuOpen ? 'Close main menu' : 'Open main menu'}</span>
-            {isMenuOpen ? <CloseButton /> : <MenuButton />}
+            {isMenuOpen ? navbarIcons["close"] : navbarIcons["menu"]}
           </button>
         </div>
         <NavLinks isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       </div>
     </motion.nav>
-  )
-}
-
-const MenuButton = () => {
-  return (
-    <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
-    </svg>
-  )
-}
-
-const CloseButton = () => {
-  return (
-    <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-    </svg>
   )
 }

@@ -12,8 +12,8 @@ export default function NavLinks({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: bo
   const { home, about, contact, services } = translations[language].navlinks;
   const links = [
     { name: home, href: '/' },
-    { name: about, href: '/about-us', },
-    { name: contact, href: '/contact-us' },
+    { name: about, href: '/about', },
+    { name: contact, href: '/contact' },
     { name: services, href: '/services' },
   ];
 

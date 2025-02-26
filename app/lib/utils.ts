@@ -3,3 +3,5 @@ export function formatNumber(language: "en" | "ar") {
     language === "ar" ? "+" : ""
   }`;
 }
+
+export const email = "wamdacenter1@gmail.com";

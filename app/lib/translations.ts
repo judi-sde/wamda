@@ -26,9 +26,22 @@ export const translations = {
     },
     contactUs: {
       title: "Contact Us",
-      address: "Aleppo, Al-Jamilieh, Ministry of Foreign Affairs Building",
-      phone: "00963994912998",
-      founder: "Mohammed Diaa Lababidi",
+      description: "Ready for any inquiries or support. We're here to help you with all your needs.",
+      info: {
+        address: {
+          title: "Head Office",
+          describtion: "Aleppo, Al-Jamilia, Ministry of Foreign Affairs Building",
+        },
+        email: "Email Us",
+        phone: "Call Us",
+        inbox: "Free Consultation",
+      },
+      form: {
+        info: { label: "Contact Info", placeholder: "0900 000 000" },
+        subject: { label: "Subject", placeholder: "Let us know how we can help you" },
+        message: { label: "Message", placeholder: "Leave a comment..." },
+        button: "Send message",
+      }
     },
     services: {
       title: "Our Services",
@@ -90,9 +103,22 @@ export const translations = {
     },
     contactUs: {
       title: "اتصل بنا",
-      address: "حلب، الجميلية، مبنى وزارة الخارجية",
-      phone: "00963994912998",
-      founder: "محمد ضياء لبابيدي",
+      description: "تواصل معنا لأي استفسارات أو دعم. نحن هنا لمساعدتك في جميع احتياجاتك.",
+      info: {
+        address: {
+          title: "المقر الرئيسي",
+          describtion: "حلب، جميلية، مبنى وزارة الخارجية",
+        },
+        email: "راسلنا",
+        phone: "اتصل بنا",
+        inbox: "استشارة مجانية",
+      },
+      form: {
+        info: { label: "معلومات الاتصال", placeholder: "000 000 0900" },
+        subject: { label: "الموضوع", placeholder: "دعنا نعرف كيف يمكننا مساعدتك" },
+        message: { label: "الرسالة", placeholder: "اترك تعليقًا..." },
+        button: "إرسال",
+      }
     },
     services: {
       title: "خدماتنا",
