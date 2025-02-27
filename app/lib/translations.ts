@@ -1,5 +1,3 @@
-import { title } from "process";
-
 export const translations = {
   en: {
     home: {
@@ -37,7 +35,9 @@ export const translations = {
         inbox: "Free Consultation",
       },
       form: {
-        info: { label: "Contact Info", placeholder: "0900 000 000" },
+        name: { label: "Name/Company", placeholder: "John Doe, Amazon Inc., ..." },
+        phone: { label: "Contact Info", placeholder: "0900 000 000" },
+        email: "email",
         subject: { label: "Subject", placeholder: "Let us know how we can help you" },
         message: { label: "Message", placeholder: "Leave a comment..." },
         button: "Send message",
@@ -114,7 +114,9 @@ export const translations = {
         inbox: "استشارة مجانية",
       },
       form: {
-        info: { label: "معلومات الاتصال", placeholder: "000 000 0900" },
+        name: { label: "الاسم/الشركة", placeholder: "محمد احمد، أمازون، ..." },
+        phone: { label: "معلومات الاتصال", placeholder: "000 000 0900" },
+        email: "البريد الالكتروني",
         subject: { label: "الموضوع", placeholder: "دعنا نعرف كيف يمكننا مساعدتك" },
         message: { label: "الرسالة", placeholder: "اترك تعليقًا..." },
         button: "إرسال",
