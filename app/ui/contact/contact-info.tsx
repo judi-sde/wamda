@@ -9,7 +9,7 @@ import { email, formatNumber } from "@/app/lib/utils";
 
 export default function ContactInfo({ className="lg:hidden grid grid-cols-1 gap-4 md:grid-cols-2 text-justify py-4 px-4" }: { className?: string }) {
   const { language } = useLanguage();
-  const { info } = translations[language].contactUs;
+  const { info } = translations[language].contact;
   const contactInfo = [
     { title: info.address.title, description: info.address.describtion, href: "https://maps.app.goo.gl/oc1Q1x6fnFJCaf4i9", icon: contactInfoIcons["address"] },
     { title: info.email, description: email, href: "mailto:" + email, icon: contactInfoIcons["email"] },

@@ -10,7 +10,7 @@ import { footerIcons } from "@/app/ui/icons";
 
 export default function Footer() {
   const { language } = useLanguage();
-  const { about, contact, services, logo } = translations[language].navlinks;
+  const { about, contact, services, logo } = translations[language].navbar;
   const { copyright, support, follow } = translations[language].footer;
   const emailInfo =
     { name: email, href: "mailto:" + email, icon: footerIcons["email"] }

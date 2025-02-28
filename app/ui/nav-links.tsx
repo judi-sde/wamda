@@ -6,10 +6,10 @@ import { usePathname } from 'next/navigation';
 import { useLanguage } from '@/app/lib/context/LanguageContext';
 import { translations } from '@/app/lib/translations';
 
-export default function NavLinks({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: boolean, setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>> }) {
+export default function navbar({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: boolean, setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>> }) {
   const pathname = usePathname();
   const { language } = useLanguage();
-  const { home, about, contact, services } = translations[language].navlinks;
+  const { home, about, contact, services } = translations[language].navbar;
   const links = [
     { name: home, href: '/' },
     { name: about, href: '/about', },

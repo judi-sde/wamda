@@ -1,159 +1,25 @@
+import { home } from "@/app/lib/translation/home";
+import { about } from "@/app/lib/translation/about";
+import { contact } from "@/app/lib/translation/contact";
+import { services } from "@/app/lib/translation/services";
+import { navbar } from "@/app/lib/translation/navbar";
+import { footer } from "@/app/lib/translation/footer";
+
 export const translations = {
   en: {
-    home: {
-      title: "Welcome to Wamda Center",
-      description:
-        "At Wamda Center, we provide cutting-edge 3D printing services, video editing, and design. Join us in an environment perfect for innovation and creation.",
-      action1: "Get started",
-      action2: "Learn more",
-      sequence: [
-        "Bring Imaginations to Life",
-        "Empowering Innovators",
-        "Join Our Community",
-      ],
-    },
-    aboutUs: {
-      title: "About Us",
-      description:
-        "Wamda Center is a hub for creativity and innovation. We offer 3D printing services, video editing, and design to bring your ideas to life.",
-      features: [
-        { title: "High 3D printing technology", description: "Utilizing the latest technologies in 3D printing to deliver high-quality results." },
-        { title: "Advanced design software and tools", description: "Equipped with cutting-edge software and tools for superior design capabilities." },
-        { title: "Client satisfaction and requirement gathering", description: "Focused on understanding and meeting client needs to ensure satisfaction." },
-      ],
-    },
-    contactUs: {
-      title: "Contact Us",
-      description: "Ready for any inquiries or support. We're here to help you with all your needs.",
-      info: {
-        address: {
-          title: "Head Office",
-          describtion: "Aleppo, Al-Jamilia, Ministry of Foreign Affairs Building",
-        },
-        email: "Email Us",
-        phone: "Call Us",
-        inbox: "Free Consultation",
-      },
-      form: {
-        name: { label: "Name/Company", placeholder: "John Doe, Amazon Inc., ..." },
-        phone: { label: "Contact Info", placeholder: "0900 000 000" },
-        email: "email",
-        subject: { label: "Subject", placeholder: "Let us know how we can help you" },
-        message: { label: "Message", placeholder: "Leave a comment..." },
-        button: "Send message",
-      }
-    },
-    services: {
-      title: "Our Services",
-      printing: {
-        title: "3D Printing Services",
-        description:
-          "Top-notch 3D printing services for hobbyists, professionals, and businesses. Precision and quality in every project.",
-      },
-      videoEditing: {
-        title: "Video Editing & Montage and Design",
-        description:
-          "Transform your raw footage into captivating visual stories with our skilled video editors and designers.",
-      },
-      environment: {
-        title: "A Perfect Environment for Innovation and Creation",
-        description:
-          "Join us in a community that thrives on pushing the boundaries of what's possible.",
-      },
-    },
-    navlinks: {
-      logo: "Wamda Center",
-      home: "Home",
-      about: "About",
-      services: "Services",
-      contact: "Contact",
-    },
-    footer: {
-      copyright: "All Rights Reserved",
-      support: "24/7 support",
-      follow: {
-        title: "Follow us",
-        instagram: "Instagram",
-        facebook: "Facebook",
-      },
-    },
+    home: home.en,
+    about: about.en,
+    contact: contact.en,
+    services: services.en,
+    navbar: navbar.en,
+    footer: footer.en,
   },
   ar: {
-    home: {
-      title: "مرحباً بكم في مركز ومضة",
-      description:
-        "في مركز ومضة، نقدم خدمات الطباعة ثلاثية الأبعاد المتطورة، وتحرير الفيديو، والتصميم. انضم إلينا في بيئة مثالية للابتكار والإبداع.",
-      action1: "ابدأ الآن",
-      action2: "تعرف أكثر",
-      sequence: [
-        "اجعل الخيال حقيقة",
-        "كن من صناع الابداع",
-        "انضم إلى مجتمع ومضة الآن!",
-      ],
-    },
-    aboutUs: {
-      title: "معلومات عنا",
-      description:
-        "مركز ومضة هو مركز للابتكار والإبداع. نقدم خدمات الطباعة ثلاثية الأبعاد، وتحرير الفيديو، والتصميم لتحقيق أفكارك.",
-      features: [
-        { title: "تقنية الطباعة ثلاثية الأبعاد المتطورة", description: "استخدام أحدث تقنيات الطباعة ثلاثية الأبعاد لتقديم نتائج عالية الجودة." },
-        { title: "برامج وأدوات التصميم المتقدمة", description: "مجهزة بأحدث البرامج والأدوات لتحقيق قدرات تصميم فائقة." },
-        { title: "رضا العملاء وجمع المتطلبات", description: "التركيز على فهم وتلبية احتياجات العملاء لضمان رضاهم." },
-      ],
-    },
-    contactUs: {
-      title: "اتصل بنا",
-      description: "تواصل معنا لأي استفسارات أو دعم. نحن هنا لمساعدتك في جميع احتياجاتك.",
-      info: {
-        address: {
-          title: "المقر الرئيسي",
-          describtion: "حلب، جميلية، مبنى وزارة الخارجية",
-        },
-        email: "راسلنا",
-        phone: "اتصل بنا",
-        inbox: "استشارة مجانية",
-      },
-      form: {
-        name: { label: "الاسم/الشركة", placeholder: "محمد احمد، أمازون، ..." },
-        phone: { label: "معلومات الاتصال", placeholder: "000 000 0900" },
-        email: "البريد الالكتروني",
-        subject: { label: "الموضوع", placeholder: "دعنا نعرف كيف يمكننا مساعدتك" },
-        message: { label: "الرسالة", placeholder: "اترك تعليقًا..." },
-        button: "إرسال",
-      }
-    },
-    services: {
-      title: "خدماتنا",
-      printing: {
-        title: "خدمات الطباعة ثلاثية الأبعاد",
-        description:
-          "خدمات الطباعة ثلاثية الأبعاد المتطورة للهواة والمحترفين والشركات. الدقة والجودة في كل مشروع.",
-      },
-      videoEditing: {
-        title: "تحرير الفيديو والمونتاج والتصميم",
-        description:
-          "حول لقطاتك الخام إلى قصص بصرية جذابة مع محرري الفيديو والمصممين المهرة لدينا.",
-      },
-      environment: {
-        title: "بيئة مثالية للابتكار والإبداع",
-        description: "انضم إلينا في مجتمع يزدهر على دفع حدود الممكن.",
-      },
-    },
-    navlinks: {
-      logo: "مركز ومضة",
-      home: "الرئيسية",
-      about: "معلومات عنا",
-      services: "خدماتنا",
-      contact: "اتصل بنا",
-    },
-    footer: {
-      copyright: "جميع الحقوق محفوظة",
-      support: "دعم على مدار الساعة",
-      follow: {
-        title: "تابعنا",
-        instagram: "إنستغرام",
-        facebook: "فيسبوك",
-      },
-    },
+    home: home.ar,
+    about: about.ar,
+    contact: contact.ar,
+    services: services.ar,
+    navbar: navbar.ar,
+    footer: footer.ar,
   },
 };

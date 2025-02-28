@@ -8,7 +8,7 @@ interface WamdaLogoProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 
 export default function WamdaLogo({ ...attr }: WamdaLogoProps) {
   const { language } = useLanguage();
-  const { logo } = translations[language].navlinks;
+  const { logo } = translations[language].navbar;
 
   return (
     <Link
