@@ -17,7 +17,7 @@ const options = [
 
 type OptionType = typeof options[number];
 
-export default function AnimationElement({ animation }: { animation: OptionType }) {
+export default function AnimationElement({ animation, dimensions }: { animation: OptionType, dimensions?: { width: number, height: number } }) {
 
   const defaultOptions = {
     loop: true,
@@ -27,6 +27,12 @@ export default function AnimationElement({ animation }: { animation: OptionType 
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+
+  if (dimensions) {
+    return (
+      <Lottie options={defaultOptions} width={dimensions.width} height={dimensions.height} />
+    )
+  }
 
   return (
     <Lottie options={defaultOptions} />

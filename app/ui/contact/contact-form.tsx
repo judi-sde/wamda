@@ -5,6 +5,7 @@ import { translations } from "@/app/lib/translations";
 import { FormEvent, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
+import AnimationElement from "@/app/ui/AnimationElement";
 
 export default function ContactForm({ className }: { className?: string }) {
   const { language } = useLanguage();
@@ -23,8 +24,12 @@ export default function ContactForm({ className }: { className?: string }) {
   const handleSend = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!formRef.current) return;
+    const formStatus = {
+      success: form["success"],
+      failure: form["errors"].form
+    }
     setLoading(true);
-    sendEmail(formRef.current, setLoading);
+    sendEmail(formRef.current, setLoading, formStatus);
     console.log("pass");
     (e.target as HTMLFormElement).reset();
   };
@@ -36,7 +41,7 @@ export default function ContactForm({ className }: { className?: string }) {
           {formFields.slice(0, 2).map(field => (
             <div key={field.id} className="flex-1">
               <label htmlFor={field.id} className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">{field.label}</label>
-              <input type={field.type} id={field.id} name={field.name} className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder={field.placeholder} required />
+              <input type={field.type} id={field.id} name={field.name} className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder={field.placeholder}  />
             </div>
           ))}
         </div>
@@ -46,17 +51,20 @@ export default function ContactForm({ className }: { className?: string }) {
             {field.type === "textarea" ? (
               <textarea id={field.id} name={field.name} rows={field.rows} className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder={field.placeholder}></textarea>
             ) : (
-              <input type={field.type} id={field.id} name={field.name} className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder={field.placeholder} required />
+              <input type={field.type} id={field.id} name={field.name} className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder={field.placeholder} />
             )}
           </div>
         ))}
-        <button type="submit" className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-blue-700 sm:w-fit hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">{form["button"]}</button>
+        <button type="submit" className={`w-[155.91px] h-[74px] flex items-center ${loading ? "justify-between" : "justify-center"} py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800`}>
+          {loading ? form["loading"] : form["button"]}
+          {loading ? <AnimationElement animation="loading" dimensions={{ width: 50, height: 50 }} /> : ""}
+        </button>
       </form>
     </div>
   )
 }
 
-const sendEmail = (form: HTMLFormElement, setLoading: React.Dispatch<React.SetStateAction<boolean>>) => {
+const sendEmail = (form: HTMLFormElement, setLoading: React.Dispatch<React.SetStateAction<boolean>>, formStatus: { success: string, failure: { message: string, instruction: string } }) => {
   console.log("sendEmail");
   emailjs
     .sendForm(
@@ -71,7 +79,7 @@ const sendEmail = (form: HTMLFormElement, setLoading: React.Dispatch<React.SetSt
         Swal.fire({
           position: "top-end",
           icon: "success",
-          title: "Your Message has been sent",
+          title: formStatus["success"],
           showConfirmButton: false,
           timer: 1500,
         });
@@ -82,8 +90,8 @@ const sendEmail = (form: HTMLFormElement, setLoading: React.Dispatch<React.SetSt
         Swal.fire({
           position: "top-end",
           icon: "error",
-          title: "Failed to send your message",
-          text: "Please try again later.",
+          title: formStatus["failure"].message,
+          text: formStatus["failure"].instruction,
           showConfirmButton: true,
         });
         setLoading(false);
