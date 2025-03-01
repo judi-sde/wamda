@@ -7,7 +7,7 @@ export const about = {
       {
         title: "High 3D printing technology",
         description:
-          "Utilizing the latest technologies in 3D printing to deliver high-quality results.",
+          "Utilizing high technologies in 3D printing to deliver high-quality results.",
       },
       {
         title: "Advanced design software and tools",
@@ -50,7 +50,7 @@ export const about = {
       {
         title: "تقنية الطباعة ثلاثية الأبعاد المتطورة",
         description:
-          "استخدام أحدث تقنيات الطباعة ثلاثية الأبعاد لتقديم نتائج عالية الجودة.",
+          "استخدام تقنيات الطباعة ثلاثية الأبعاد لتقديم نتائج عالية الجودة.",
       },
       {
         title: "برامج وأدوات التصميم المتقدمة",

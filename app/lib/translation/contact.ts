@@ -15,7 +15,7 @@ export const contact = {
     form: {
       name: {
         label: "Name/Company",
-        placeholder: "John Doe, Amazon Inc., ...",
+        placeholder: "John Doe, Sama TV, ...",
       },
       phone: { label: "Contact Info", placeholder: "0900 000 000" },
       email: "Email",
@@ -55,7 +55,7 @@ export const contact = {
       inbox: "استشارة مجانية",
     },
     form: {
-      name: { label: "الاسم/الشركة", placeholder: "محمد احمد، أمازون، ..." },
+      name: { label: "الاسم/الشركة", placeholder: "محمد احمد، سما تي في، ..." },
       phone: { label: "معلومات الاتصال", placeholder: "000 000 0900" },
       email: "البريد الالكتروني",
       subject: {

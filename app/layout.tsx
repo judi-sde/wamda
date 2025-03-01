@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "@/app/ui/globals.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import ProviderWrapper from "@/app/lib/context/ProviderWrapper";
 import Navbar from "@/app/navbar";
 import { kufi } from "@/app/ui/fonts";

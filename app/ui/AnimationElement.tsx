@@ -3,6 +3,7 @@
 import constraction from "@/public/constraction.json"
 import about from "@/public/about.json"
 import loading from "@/public/loading.json"
+import background from "@/public/background.json"
 
 import dynamic from "next/dynamic";
 const Lottie = dynamic(() => import("react-lottie"), {
@@ -13,6 +14,7 @@ const options = [
   "about",
   "constraction",
   "loading",
+  "background",
 ] as const;
 
 type OptionType = typeof options[number];
@@ -43,4 +45,5 @@ const animationData = {
   about: about,
   constraction: constraction,
   loading: loading,
+  background: background,
 }
