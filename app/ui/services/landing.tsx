@@ -2,7 +2,6 @@
 
 import { useLanguage } from "@/app/lib/context/LanguageContext";
 import { translations } from "@/app/lib/translations";
-import Image from "next/image";
 import Gallery from "./gallery";
 
 export default function Landing() {
