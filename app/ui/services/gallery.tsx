@@ -49,7 +49,7 @@ export default function Gallery() {
             animate={{ opacity: index === activeIndex ? 1 : 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Image key={index} src={src} width={480} height={480} className="block h-auto rounded-lg shadow-lg" alt={"folio" + index.toString()} />
+            <Image key={index} src={src} width={480} height={480} className="block h-auto rounded-lg shadow-lg" alt={"folio" + index.toString()} loading="eager" />
           </motion.div>
         ))}
       </div>
