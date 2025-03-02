@@ -8,7 +8,10 @@ import { kufi } from "@/app/ui/fonts";
 import Footer from "@/app/footer";
 
 export const metadata: Metadata = {
-  title: "Wamda Ceneter",
+  title: {
+    template: '%s | Wamda Center',
+    default: 'Wamda Center',
+  },
   description: "Design first company",
   metadataBase: new URL('https://wamda-center.vercel.app'),
 };
