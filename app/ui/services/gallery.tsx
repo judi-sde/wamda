@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useSwipeable } from 'react-swipeable';
+import { useLanguage } from '@/app/lib/context/LanguageContext';
 
 export default function Gallery() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -14,10 +15,18 @@ export default function Gallery() {
     "/folio4.jpg",
     "/folio5.jpg"
   ];
+  const { language } = useLanguage();
+  const swipeLeftHandler = () => setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
+  const swipeRightHandler = () => setActiveIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
 
-  const handlers = useSwipeable({
-    onSwipedLeft: () => setActiveIndex((prevIndex) => (prevIndex + 1) % images.length),
-    onSwipedRight: () => setActiveIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length),
+  const handlers = useSwipeable(language === "en" ? {
+    onSwipedLeft: swipeLeftHandler,
+    onSwipedRight: swipeRightHandler,
+    preventScrollOnSwipe: true,
+    trackMouse: true
+  } : {
+    onSwipedRight: swipeLeftHandler,
+    onSwipedLeft: swipeRightHandler,
     preventScrollOnSwipe: true,
     trackMouse: true
   });
@@ -49,7 +58,7 @@ export default function Gallery() {
             animate={{ opacity: index === activeIndex ? 1 : 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Image key={index} src={src} width={480} height={480} className="block h-auto rounded-lg shadow-lg" alt={"folio" + index.toString()} loading="eager" />
+            <Image key={index} src={src} width={480} height={480} className="block h-auto rounded-lg shadow-lg" alt={"folio" + index.toString()} />
           </motion.div>
         ))}
       </div>
