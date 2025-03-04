@@ -41,7 +41,7 @@ export default function Gallery() {
   return (
     <motion.div
       id="custom-controls-gallery"
-      className="relative"
+      className="relative w-fit"
       data-carousel="slide"
       {...handlers}
       initial={{ scale: 0.8 }}
