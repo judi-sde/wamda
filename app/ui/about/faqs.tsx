@@ -17,7 +17,7 @@ export default function FAQs() {
 
   return (
     <section className="bg-white dark:bg-gray-900 lg:text-justify pb-16 px-4 text-center bg-cover">
-      <div className="w-full px-4 mx-auto flex flex-col lg:flex-row lg:justify-between lg:gap-96">
+      <div className="w-full mx-auto flex flex-col lg:flex-row lg:justify-between lg:gap-96">
         <div className="flex flex-col max-lg:items-center">
           <h1 className="max-w-lg mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">{title}</h1>
           <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">{description}</p>

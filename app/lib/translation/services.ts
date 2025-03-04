@@ -5,6 +5,8 @@ export const services = {
       "Explore the wide range of services we offer to help you innovate and create.",
     services: {
       title: "What We Do",
+      description:
+        "Discover the range of services we offer to help you bring your ideas to life.",
       printing: {
         title: "3D Printing Services",
         description:
@@ -29,6 +31,8 @@ export const services = {
       "استكشف مجموعة واسعة من الخدمات التي نقدمها لمساعدتك على الابتكار والإبداع.",
     services: {
       title: "ما نقوم به",
+      description:
+        "اكتشف مجموعة الخدمات التي نقدمها لمساعدتك في تحقيق أفكارك.",
       printing: {
         title: "خدمات الطباعة ثلاثية الأبعاد",
         description:

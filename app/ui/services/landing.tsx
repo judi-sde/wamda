@@ -3,7 +3,7 @@
 import { useLanguage } from "@/app/lib/context/LanguageContext";
 import { translations } from "@/app/lib/translations";
 import Gallery from "@/app/ui/services/gallery";
-import AnimationElement from "../AnimationElement";
+import AnimationElement from "@/app/ui/AnimationElement";
 
 export default function Landing() {
   const { language } = useLanguage();
@@ -15,11 +15,11 @@ export default function Landing() {
         <div className="font-light sm:text-lg">
           {/* <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">{title}</h2> */}
           <h2 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">{title}</h2>
-          <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">{description}</p>
+          <p className="max-w-2xl font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">{description}</p>
         </div>
-        <div className="grid grid-cols-2 max-sm:grid-cols-1 lg:grid-cols-1 gap-4 mt-8">
+        <div className="grid grid-cols-2 max-[550px]:grid-cols-1 lg:grid-cols-1 gap-4 mt-8">
           <Gallery />
-          <div className="bg-white dark:bg-gray-800 shadow-md rounded-lg p-4 lg:hidden">
+          <div className="bg-white dark:bg-gray-800 max-[550px]:max-w-[480px] shadow-md rounded-lg p-4 lg:hidden">
             <AnimationElement animation="printing" />
           </div>
         </div>

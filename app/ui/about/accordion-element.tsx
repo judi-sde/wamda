@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 export default function AccordionItem({ question, index, activeIndex, toggleAccordion }: { question: { question: string, answer: string }, index: number, activeIndex: number | null, toggleAccordion: (index: number) => void }) {
   return (
     <div className="mb-4">
@@ -23,15 +25,18 @@ export default function AccordionItem({ question, index, activeIndex, toggleAcco
           </svg>
         </button>
       </h2>
-      <div
+      <motion.div
         id={`accordion-collapse-body-${index}`}
         className={`${activeIndex === index ? '' : 'hidden'}`}
         aria-labelledby={`accordion-collapse-heading-${index}`}
+        initial={{ height: 0 }}
+        animate={{ height: activeIndex === index ? 'auto' : 0 }}
+        transition={{ duration: 0.3 }}
       >
         <div className="p-5 border border-t-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900 rounded-b-lg">
           <p className="mb-2 text-gray-500 dark:text-gray-400">{question.answer}</p>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
