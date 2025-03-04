@@ -18,7 +18,7 @@ export default function Landing() {
         <TypeAnimation
           preRenderFirstString={true}
           key={language}
-          className="md:text-4xl text-xl font-bold text-gray-900 backdrop-brightness-200"
+          className="md:text-4xl text-xl font-bold text-blue-300 backdrop-brightness-200"
           cursor={true}
           sequence={[
             sequence[0],

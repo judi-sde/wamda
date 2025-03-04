@@ -4,7 +4,7 @@ import { useLanguage } from "@/app/lib/context/LanguageContext";
 import { translations } from "@/app/lib/translations";
 import ListElement from "@/app/ui/about/feature-element";
 
-export default function Features({ className="lg:hidden flex gap-4 max-sm:flex-col text-center max-sm:text-justify px-4 py-16" }: { className?: string }) {
+export default function Features({ className="lg:hidden sm:flex gap-4 max-sm:block sm:text-center px-4 py-16" }: { className?: string }) {
   const { language } = useLanguage();
   const { features } = translations[language].about
   return (

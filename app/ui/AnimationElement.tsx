@@ -5,6 +5,8 @@ import about from "@/public/about.json"
 import loading from "@/public/loading.json"
 import background from "@/public/background.json"
 import printing from "@/public/printing.json"
+import error from "@/public/error.json"
+import NotFound from "@/public/not-found.json"
 
 import dynamic from "next/dynamic";
 const Lottie = dynamic(() => import("react-lottie"), {
@@ -16,7 +18,9 @@ const options = [
   "constraction",
   "loading",
   "background",
-  "printing"
+  "printing",
+  "error",
+  "not-found"
 ] as const;
 
 type OptionType = typeof options[number];
@@ -49,4 +53,6 @@ const animationData = {
   loading: loading,
   background: background,
   printing: printing,
+  error: error,
+  ["not-found"]: NotFound
 }
