@@ -8,7 +8,7 @@ export default function ListElement({ title, description, idx }: { title: string
       </div>
       <div>
         <h3 className="mb-2 text-xl font-bold dark:text-white">{title}</h3>
-        <p className="text-gray-500 dark:text-gray-400">{description}</p>
+        <p className="text-gray-500 dark:text-gray-400 whitespace-nowrap">{description}</p>
       </div>
     </li>
   )

@@ -36,23 +36,23 @@ export default function Gallery() {
       setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, [images.length, activeIndex]);
 
   return (
     <motion.div
       id="custom-controls-gallery"
-      className="relative flex justify-center"
+      className="relative"
       data-carousel="slide"
       {...handlers}
       initial={{ scale: 0.8 }}
       animate={{ scale: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="relative overflow-hidden rounded-lg flex items-center justify-center">
+      <div className="relative overflow-hidden rounded-lg">
         {images.map((src, index) => (
           <motion.div
             key={index}
-            className={`duration-700 ease-in-out min-h-[40vh] ${index === activeIndex ? 'flex' : 'hidden'} justify-center items-center`}
+            className={`duration-700 ease-in-out min-h-[40vh] ${index === activeIndex ? 'block' : 'hidden'}`}
             data-carousel-item={index === activeIndex ? 'active' : ''}
             initial={{ opacity: 0 }}
             animate={{ opacity: index === activeIndex ? 1 : 0 }}
@@ -62,7 +62,7 @@ export default function Gallery() {
           </motion.div>
         ))}
       </div>
-      <div className="rounded-b-lg absolute max-w-[480px] mx-auto bottom-0 left-0 right-0 flex justify-center py-4 space-x-3 rtl:space-x-reverse bg-black bg-opacity-50">
+      <div className="rounded-b-lg absolute max-w-[480px] bottom-0 left-0 right-0 flex justify-center py-4 space-x-3 rtl:space-x-reverse bg-black bg-opacity-50">
         {images.map((_, index) => (
           <button
             key={index}

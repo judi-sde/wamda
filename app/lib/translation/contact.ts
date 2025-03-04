@@ -48,7 +48,7 @@ export const contact = {
     info: {
       address: {
         title: "المقر الرئيسي",
-        describtion: "حلب، جميلية، مبنى وزارة الخارجية",
+        describtion: "حلب، الجميلية، مبنى وزارة الخارجية",
       },
       email: "راسلنا",
       phone: "اتصل بنا",
