@@ -11,7 +11,7 @@ export default function Landing() {
 
   return (
     <section className="bg-white dark:bg-gray-900">
-      <div className="lg:gap-8 flex lg:flex-row flex-col justify-between lg:items-center py-8 px-4 mx-auto max-w-screen-xl lg:py-16  mt-[78.75px]">
+      <div className="lg:gap-8 flex lg:flex-row flex-col justify-between lg:items-center py-8 px-4 mx-auto max-w-screen-xl lg:py-4 mt-[78.75px]">
         <div className="font-light sm:text-lg">
           {/* <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">{title}</h2> */}
           <h2 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">{title}</h2>
