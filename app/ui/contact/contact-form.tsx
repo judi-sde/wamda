@@ -55,7 +55,7 @@ export default function ContactForm({ className }: { className?: string }) {
             )}
           </div>
         ))}
-        <button type="submit" aria-disabled={loading} disabled={loading} className={`relative text-center aria-disabled:text-justify aria-disabled:cursor-not-allowed aria-disabled:opacity-50 w-full h-[74px] py-3 px-5 text-sm font-medium text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800`}>
+        <button type="submit" aria-disabled={loading} disabled={loading} className={`relative text-center aria-disabled:text-left rtl:aria-disabled:text-right aria-disabled:cursor-not-allowed aria-disabled:opacity-50 w-full h-[74px] py-3 px-5 text-sm font-medium text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800`}>
           <div className="absolute inset-0 w-30 scale-x-[-1] scale-y-[-1]">
             <AnimationElement animation="background" />
           </div>

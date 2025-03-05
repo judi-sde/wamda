@@ -7,7 +7,7 @@ import { translations } from "@/app/lib/translations";
 import { email, formatNumber } from "@/app/lib/utils";
 
 
-export default function ContactInfo({ className="lg:hidden grid grid-cols-1 gap-4 md:grid-cols-2 text-justify py-4 px-4" }: { className?: string }) {
+export default function ContactInfo({ className="lg:hidden grid grid-cols-1 gap-4 md:grid-cols-2 text-left rtl:text-right py-4 px-4" }: { className?: string }) {
   const { language } = useLanguage();
   const { info } = translations[language].contact;
   const contactInfo = [
@@ -19,7 +19,7 @@ export default function ContactInfo({ className="lg:hidden grid grid-cols-1 gap-
 
   return (
     <ul className={className}>
-      {contactInfo.map((itm, index) => (
+      {contactInfo.map((itm) => (
         <CardButton key={itm.title} {...itm} />
       ))}
     </ul>

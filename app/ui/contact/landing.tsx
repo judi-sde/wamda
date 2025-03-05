@@ -10,13 +10,13 @@ export default function Landing() {
   const { title, description } = translations[language].contact;
 
   return (
-    <section className="bg-white lg:dark:bg-gray-900 max-lg:h-[350.75px] py-16 lg:text-justify text-center bg-cover dark:bg-gray-700 bg-blend-multiply max-lg:dark:bg-[url(https://flowbite.s3.amazonaws.com/blocks/marketing-ui/contact/laptop-human.jpg)]">
+    <section className="bg-white lg:dark:bg-gray-900 max-lg:h-[350.75px] py-16 lg:text-left rtl:lg:text-right text-center bg-cover dark:bg-gray-700 bg-blend-multiply max-lg:dark:bg-[url(https://flowbite.s3.amazonaws.com/blocks/marketing-ui/contact/laptop-human.jpg)]">
       <div className="relative z-10 max-w-screen-xl px-4 mx-auto flex justify-between max-lg:justify-center lg:gap-8 mt-[78.75px]">
         <div>
           <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">{title}</h1>
           <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">{description}</p>
           <hr className="hidden lg:block border-gray-200 lg:mx-auto dark:border-gray-700 lg:my-8" />
-          <ContactInfo className="hidden lg:grid gap-4 grid-cols-2 text-justify" />
+          <ContactInfo className="hidden lg:grid gap-4 grid-cols-2 text-left rtl:text-right" />
         </div>
         <ContactForm className="hidden lg:block space-y-6 p-4 min-w-96  bg-white border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 dark:bg-gray-800" />
       </div>

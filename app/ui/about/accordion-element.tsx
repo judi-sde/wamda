@@ -2,11 +2,11 @@ import { motion } from 'framer-motion';
 
 export default function AccordionItem({ question, index, activeIndex, toggleAccordion }: { question: { question: string, answer: string }, index: number, activeIndex: number | null, toggleAccordion: (index: number) => void }) {
   return (
-    <div className="mb-4">
+    <div className="mb-4 text-left rtl:text-right">
       <h2 id={`accordion-collapse-heading-${index}`}>
         <button
           type="button"
-          className="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3 rounded-lg"
+          className="flex items-center justify-between w-full p-5 font-medium text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3 rounded-lg"
           data-accordion-target={`#accordion-collapse-body-${index}`}
           aria-expanded={activeIndex === index}
           aria-controls={`accordion-collapse-body-${index}`}

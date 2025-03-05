@@ -33,3 +33,8 @@ export default function RootLayout({
     </html>
   );
 }
+
+// NEXT_PUBLIC_EMAILJS_SERVICE_ID=service_6ns3bc7
+// NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=template_kljhl1m
+// NEXT_PUBLIC_EMAILJS_USER_ID=SvzYUl3U3UCuO-qGL
+// NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=AIzaSyBMrvvh6ozeFu7P7YSQw4MwELgtstE0QJk
