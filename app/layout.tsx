@@ -4,6 +4,7 @@ import ProviderWrapper from "@/app/lib/context/ProviderWrapper";
 import Navbar from "@/app/navbar";
 import { kufi } from "@/app/ui/fonts";
 import Footer from "@/app/footer";
+import Glitter from "./ui/Glitter";
 
 export const metadata: Metadata = {
   title: {
@@ -26,6 +27,7 @@ export default function RootLayout({
       >
         <ProviderWrapper>
           <Navbar />
+          <Glitter />
           {children}
           <Footer />
         </ProviderWrapper>
